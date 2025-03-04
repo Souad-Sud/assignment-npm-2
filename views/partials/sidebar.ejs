@@ -1,0 +1,12 @@
+<i class="fa fa-bars" id="show-sideBar"></i> 
+<div class="aside-links">
+   <% if (locals.sideBar) { %>     
+     <aside class="aside">  
+        <ul class="dish-links">
+          <% allDishesItem.forEach(dish => { %>
+            <li><a href= <%=`/${dish.type}/${dish.name}`%>><%= dish.name%></a> </li>
+          <% }) %>              
+        </ul>
+     </aside>
+   <% } %>   
+</div>  

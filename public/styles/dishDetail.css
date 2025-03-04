@@ -1,0 +1,75 @@
+.item-details {
+   padding: 10px;
+   margin: 50px 200px; 
+   display: flex;
+   flex-direction: row;
+   color: #946204;
+   gap: 2rem;
+}
+ 
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img__container {
+    border-radius: 50px;   
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    height:500px;
+    width: 400px;
+    background-image: url("../images/336357-PB8P55-617.jpg"); 
+    padding: 40px;
+}
+
+.img__container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+}
+.item-para span {
+    color: #FF324D;
+    font-weight: bold;
+}
+
+.cookin-time {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.cookin-time h4 {
+    padding: 5px;
+    font-size: 0.8rem;  
+}
+
+.line {
+    color: black;
+    border: 2px solid #946204;
+    width: 400px;
+  }
+
+  
+@media screen and (max-width: 1025px) {
+    .item-details {
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img__container {
+        padding: 10px;
+        height:400px;
+        width: 300px;
+    }
+
+    .img__container img {
+        max-width: 100%;
+    } 
+
+}

@@ -1,0 +1,133 @@
+<% if (locals.mainContent) { %>
+    <% if(mainContent==="DessertCookies") { %>
+        <main class="main main-container-elem">
+            <h2><%= pageHeader %></h2>
+            <article class="dessert-article">
+
+                <div class="image-container-kiss-cookie">
+                        <img src="../images/Kiss--Cookies.jpg" alt="kiss cookies">
+                    </div>
+                    <div class="description-cookies___conatiner">
+
+                        <h2><span class="letter">T</span>he Classic Peanut Butter</h2>
+
+                            <p class="text">A favorite during the holiday season, peanut butter
+                                blossoms are as easy as they are delicious. The soft,
+                                chewy cookies surrounding a perfectly sweet chocolate 
+                                kiss add a beautiful festive touch to your holiday cookie
+                                platters or your next cookie exchange! I know they’re a 
+                                classic Christmas cookie, but I actually bake peanut
+                                butter blossoms all year round!<span class="dotts">......</span><span class="read-more">I can’t resist making 
+                                them whenever the mood strikes. Peanut butter 
+                                blossoms (also called peanut butter kiss cookies) are a 
+                                delightful, creative, visually striking combination of peanut
+                                 butter and chocolate that is hard to resist</span>.</p>
+                                 <button class="readMore">Read more</button>
+                    </div>
+            </div>
+
+            </article>
+        </main>
+    <% } else if(mainContent === "DessertDrinks")  { %>
+        <main class="main  main-container-elem">
+           <h2><%= pageHeader %></h2>
+            <article class="dessert-article">
+
+                <div class="image-container-kiss-cookie">
+                        <img src="../images/HotChocolate.jpg" alt="Hot Chocolate image">
+                    </div>
+                    <div class="description-cookies___conatiner">
+
+                        <h2><span class="letter">H</span>ot Chocolate</h2>
+
+                            <p class="text">
+                                Hot chocolate, also known as hot cocoa or drinking chocolate, 
+                                is a heated drink consisting of shaved or melted chocolate or cocoa powder,
+                                heated milk or water, and usually a sweetener. It is often garnished with 
+                                whipped cream or marshmallows. Hot chocolate made with melted chocolate is
+                                sometimes called drinking chocolate, characterized by less sweetness and 
+                                a thicker consistency. <span class="dotts">......</span><span class="read-more">
+                                     The first chocolate drink is believed to have been 
+                                created at least 5,300 years ago, starting with the Mayo-Chinchipe culture 
+                                in what is present-day Ecuador,[2] and later consumed by the Maya around
+                                 2,500–3,000 years ago.</span>.</p>
+                                 <button class="readMore">Read more</button>
+                    </div>
+            </div>
+
+            </article>
+        </main>
+    <% }  else if(mainContent === "DessertCakes" ) { %>
+        <main class="main  main-container-elem">
+       <h2><%= pageHeader %></h2>
+            <article class="dessert-article">
+
+                <div class="image-container-kiss-cookie">
+                        <img src="../images/browni.jpg" alt="browni image">
+                    </div>
+                    <div class="description-cookies___conatiner">
+
+                        <h2><span class="letter">B</span>rowni</h2>
+
+                            <p class="text">
+                                Brownies come in a variety of forms and may be either fudgy or 
+                                cakey, depending on their density. Brownies often, but not always, 
+                                have a glossy "skin" on their upper crust. They may also include nuts,
+                                frosting, chocolate chips, or other ingredients.<span class="dotts">......</span><span class="read-more">
+                                A variation made with
+                                brown sugar and vanilla rather than chocolate in the batter is called 
+                                a blond brownie or blondie. The brownie was developed in the United
+                                States at the end of the 19th century and popularized there during
+                                the first half of the 20th century.                   
+                                </span>.</p>
+                                 <button class="readMore">Read more</button>
+                    </div>
+            </div>
+
+            </article>
+    </main>
+
+<% } else { %>
+<main class="main">
+    <div class="main_header">
+        <h2><span class="letter">W</span>elcome to easy recipes</h2>
+            <div class="main-presentation">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Voluptas expedita quisquam placeat natus soluta laudantium ex. 
+                    Odit accusamus magni ducimus provident, aperiam, obcaecati nulla esse, cumque mollitia suscipit maxime fugit.
+                Exercitationem consequuntur sunt perspiciatis molestias 
+                eum natus maxime, at facere fuga dignissimos harum 
+                porro ut esse eos iste minima quis obcaecati dicta 
+                eaque id quibusdam reprehenderit atque. Tempore, 
+                nostrum eius?
+                </p>
+                <hr>   
+            <div>
+                <a href="https://www.facebook.com/reel/413748238224761" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/shorts/P_IOiCzMZmI" class="fa fa-youtube"></a>
+            </div>
+            </div>
+    </div>
+
+<div class="articles__conatiner">
+    <div class="article---containers">    
+        <% allDishesItem.forEach(dish => { %>         
+            <article class="article">
+                <div class="article__img_container">
+                    <img src="<%= dish.image %>" alt="">
+                </div>
+                <div class="article__des">
+
+                    <h2 class="article__title"><a href="<%= dish.name%>"><%= dish.name%></a></h2>
+                    <p class="article__description">
+                        <%= dish.description %>                    
+                    </p>
+                </div>                
+            </article>
+            <% }) %>              
+    </div>
+</div>
+</main>
+<% } %>
+<% } %>
+ 
