@@ -11,6 +11,11 @@
             "src" : "/styles/(.*)",
             "dest" :"public/styles/$1"
         }
-    ]
+    ],
     
-}
+    "rewrites": 
+    [
+        { 
+            "source": "/(.*)", "destination": "/" 
+            }]
+ }
