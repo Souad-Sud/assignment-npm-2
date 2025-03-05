@@ -8,14 +8,15 @@
     ],
     "routes": [
         {
-          
-            "dest" :"public/styles/$1"
+            "src": "/(.*)",
+            "dest": "index.js"
         }
     ],
-    
-    "rewrites": 
+   
+    "rewrites":
     [
-        { 
-            "source": "/(.*)", "destination": "/" 
+        {
+            "source": "/(.*)", "destination": "/"
             }]
  }
+ 
